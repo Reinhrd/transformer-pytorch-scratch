@@ -1,4 +1,4 @@
-# Catatan Belajar 
+# Learning Materials
 
 Catatan santai buat diriku sendiri pas bedah repo Transformer ini. Bukan dokumen
 resmi, cuma biar paham alurnya tiap buka lagi.
