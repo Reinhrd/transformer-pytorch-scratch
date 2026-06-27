@@ -6,7 +6,7 @@ cepat biar gampang dipahami ulang tiap dibuka.
 ## Inti yang perlu dipegang
 
 Transformer intinya satu ide: **attention**. Tiap token "nanya" ke semua token
-lain — mana yang relevan? Caranya lewat tiga vektor: Query (Q), Key (K),
+lain mana yang relevan? Caranya lewat tiga vektor: Query (Q), Key (K),
 Value (V). Q dicocokkan ke semua K → dapat bobot → ambil campuran berbobot dari V.
 
 Rumus kunci:
@@ -37,7 +37,7 @@ Attention(Q, K, V) = softmax(Q·Kᵀ / √dₖ) · V
 - **Masked attention** di decoder: token gak boleh ngintip masa depan, jadi
   dikasih masker segitiga-atas sebelum softmax. Penting buat training.
 - **Cross-attention** di encoder-decoder: Q dari decoder, tapi K & V dari output
-  encoder — di sinilah decoder "membaca" kalimat sumber.
+  encoder di sinilah decoder "membaca" kalimat sumber.
 - Bedanya tiga arsitektur cuma soal blok apa yang dipakai dan masking-nya,
   bukan mekanisme attention-nya. Mekanismenya sama.
 
