@@ -1,15 +1,15 @@
-# Transformer dari Nol (PyTorch) — Terjemahan Inggris → Italia
+# Transformer dari Nol (PyTorch)  Terjemahan Inggris → Italia
 
 Implementasi arsitektur Transformer dari paper
 [Attention Is All You Need](https://arxiv.org/abs/1706.03762), ditulis dari nol
 pakai PyTorch. Fokusnya bikin arsitektur sequence-to-sequence buat menerjemahkan
-teks dari bahasa Inggris ke Italia — tapi modulnya disusun rapi, jadi bisa
+teks dari bahasa Inggris ke Italia  tapi modulnya disusun rapi, jadi bisa
 dipakai juga buat encoder-only dan decoder-only.
 
 > **Catatan kepemilikan.** Kode inti repo ini **karya Edwin Onuonga**
 > (`ed@eonu.net`), berlisensi **MIT**. Salinan ini cuma **kupelajari, kurapikan,
 > dan kuanotasi ulang** buat belajar pribadi. Detail lengkap ada di `CREDITS.md`
-> dan `LICENSE`. — Reinhard
+> dan `LICENSE`.  Reinhard
 
 ## Gambaran singkat
 
@@ -19,7 +19,7 @@ mekanisme **attention** supaya tiap token bisa langsung "melihat" semua token
 lain sekaligus. Repo ini memanfaatkan arsitektur itu buat menerjemahkan kalimat
 Inggris ke Italia.
 
-Yang menarik: hampir semua komponen ditulis dari nol — attention, multi-head,
+Yang menarik: hampir semua komponen ditulis dari nol  attention, multi-head,
 positional encoding, block encoder/decoder, sampai strategi decoding (greedy,
 beam, top-k, nucleus). Satu-satunya yang dipinjam dari luar adalah **tokenizer**
 Hugging Face, murni buat pra-pemrosesan data.
@@ -27,7 +27,7 @@ Hugging Face, murni buat pra-pemrosesan data.
 ## Data
 
 Model dilatih dan dievaluasi pakai dataset
-[g8a9/europarl_en-it](https://huggingface.co/datasets/g8a9/europarl_en-it) —
+[g8a9/europarl_en-it](https://huggingface.co/datasets/g8a9/europarl_en-it) 
 pasangan kalimat Inggris–Italia.
 
 Idealnya dilatih di seluruh dataset (~1,9 juta pasangan kalimat), tapi karena
@@ -56,5 +56,5 @@ transformer/
 
 Arsitektur dan konfigurasi mengikuti paper
 [Attention Is All You Need](https://arxiv.org/abs/1706.03762). Implementasi inti
-sepenuhnya karya **Edwin Onuonga** (lisensi MIT) — terima kasih atas kode yang
+sepenuhnya karya **Edwin Onuonga** (lisensi MIT)  terima kasih atas kode yang
 rapi dan enak dipelajari.
