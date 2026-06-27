@@ -1,16 +1,15 @@
 # Learning Materials
 
-Catatan santai buat diriku sendiri pas bedah repo Transformer ini. Bukan dokumen
-resmi, cuma biar paham alurnya tiap buka lagi.
+Catatan ringkas alur repo Transformer ini. Bukan dokumen resmi, sekadar peta
+cepat biar gampang dipahami ulang tiap dibuka.
 
-## Inti yang harus kupegang
+## Inti yang perlu dipegang
 
-Transformer itu intinya satu ide: **attention**. Tiap token "nanya" ke semua
-token lain  mana yang relevan buatku? Caranya lewat tiga vektor: Query (Q),
-Key (K), Value (V). Q dicocokkan ke semua K → dapat bobot → ambil campuran
-berbobot dari V.
+Transformer intinya satu ide: **attention**. Tiap token "nanya" ke semua token
+lain — mana yang relevan? Caranya lewat tiga vektor: Query (Q), Key (K),
+Value (V). Q dicocokkan ke semua K → dapat bobot → ambil campuran berbobot dari V.
 
-Rumus yang wajib diingat:
+Rumus kunci:
 
 ```
 Attention(Q, K, V) = softmax(Q·Kᵀ / √dₖ) · V
@@ -33,16 +32,16 @@ Attention(Q, K, V) = softmax(Q·Kᵀ / √dₖ) · V
 - `decoding/` → cara milih token output: greedy (paling aman), beam (cari jalur
   terbaik), top-k & nucleus (lebih variatif), temperature (atur "berani"-nya).
 
-## Yang sempat bikin aku mikir
+## Poin yang gampang bikin bingung
 
 - **Masked attention** di decoder: token gak boleh ngintip masa depan, jadi
   dikasih masker segitiga-atas sebelum softmax. Penting buat training.
 - **Cross-attention** di encoder-decoder: Q dari decoder, tapi K & V dari output
-  encoder, di sinilah decoder "membaca" kalimat sumber.
+  encoder — di sinilah decoder "membaca" kalimat sumber.
 - Bedanya tiga arsitektur cuma soal blok apa yang dipakai dan masking-nya,
   bukan mekanisme attention-nya. Mekanismenya sama.
 
 ## Sumber
 
 Kode inti: Edwin Onuonga (MIT). Paper: Attention Is All You Need (2017).
-Catatan ini hasil belajarku sendiri di atas kode beliau.
+Catatan ini disusun sebagai bahan belajar di atas kode beliau.
