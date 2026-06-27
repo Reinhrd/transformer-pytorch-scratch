@@ -32,7 +32,7 @@ Attention(Q, K, V) = softmax(Q·Kᵀ / √dₖ) · V
 - `decoding/` → cara milih token output: greedy (paling aman), beam (cari jalur
   terbaik), top-k & nucleus (lebih variatif), temperature (atur "berani"-nya).
 
-## Poin yang gampang bikin bingung
+## Pernyataan
 
 - **Masked attention** di decoder: token gak boleh ngintip masa depan, jadi
   dikasih masker segitiga-atas sebelum softmax. Penting buat training.
