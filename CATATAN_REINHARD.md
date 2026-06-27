@@ -6,7 +6,7 @@ resmi, cuma biar paham alurnya tiap buka lagi.
 ## Inti yang harus kupegang
 
 Transformer itu intinya satu ide: **attention**. Tiap token "nanya" ke semua
-token lain — mana yang relevan buatku? Caranya lewat tiga vektor: Query (Q),
+token lain  mana yang relevan buatku? Caranya lewat tiga vektor: Query (Q),
 Key (K), Value (V). Q dicocokkan ke semua K → dapat bobot → ambil campuran
 berbobot dari V.
 
