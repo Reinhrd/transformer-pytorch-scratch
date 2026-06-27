@@ -1,4 +1,4 @@
-# Catatan Belajar — Reinhard
+# Catatan Belajar 
 
 Catatan santai buat diriku sendiri pas bedah repo Transformer ini. Bukan dokumen
 resmi, cuma biar paham alurnya tiap buka lagi.
@@ -38,7 +38,7 @@ Attention(Q, K, V) = softmax(Q·Kᵀ / √dₖ) · V
 - **Masked attention** di decoder: token gak boleh ngintip masa depan, jadi
   dikasih masker segitiga-atas sebelum softmax. Penting buat training.
 - **Cross-attention** di encoder-decoder: Q dari decoder, tapi K & V dari output
-  encoder — di sinilah decoder "membaca" kalimat sumber.
+  encoder, di sinilah decoder "membaca" kalimat sumber.
 - Bedanya tiga arsitektur cuma soal blok apa yang dipakai dan masking-nya,
   bukan mekanisme attention-nya. Mekanismenya sama.
 
